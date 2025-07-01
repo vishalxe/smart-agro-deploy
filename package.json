@@ -1,10 +1,13 @@
 {
+  "homepage": "https://vishalxe.github.io/smart-agro-deploy",
   "name": "agro-smart",
   "version": "3.0.0",
   "description": "Agricultural e-commerce platform connecting farmers with consumers - Local Storage Edition",
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
+    "predeploy": "npm start build",
+    "deploy": "gh-pages -d build",
     "dev": "nodemon backend/server.js",
     "init-data": "node backend/utils/initializeData.js",
     "test": "echo \"Error: no test specified\" && exit 1",
